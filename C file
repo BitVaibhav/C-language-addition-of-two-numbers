@@ -1,15 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-   float a, b, c;
+    int n;
+    float a,b;
+    printf("***Enter option of your choice***\n\n");
+    printf("Press 1 for Addition\n");
+    printf("Press 2 for Subtraction\n");
+    scanf("%d",&n);
+    switch(n){
+    case 1:
+        printf("Enter two numbers\n");
+        scanf("%f%f",&a,&b);
+        printf("Result is %f",a+b);
+        break;
 
-   printf("Enter two numbers to add\n");
-   scanf("%f%f",&a,&b);
+    case 2:
+        printf("Enter two numbers\n");
+        scanf("%f%f",&a,&b);
+        printf("Result is %f",a-b);
+        break;
 
-   c = a + b;
-
-   printf("Sum of entered numbers = %f\n",c);
-
-   return 0;
+    default:
+        printf("Enter valid response");
+    }
 }
